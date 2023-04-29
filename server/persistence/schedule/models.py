@@ -180,7 +180,7 @@ class Event(db.Model):
     )
     status = db.Column(
         db.String,
-        nullable=True
+        nullable=True,
     )
     conference_link = db.Column(
         sqlalchemy_utils.URLType,

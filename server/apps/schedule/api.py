@@ -26,13 +26,13 @@ router = Blueprint(
 @router.get('/events/<type_date>')
 @validate()
 def list_events(type_date: str):
-    now = datetime.now().date().month
+    now = datetime.now().date().year
 
     query = db.session.query(
         schedule.Event,
     ).filter(
-        extract('month', schedule.Event.date_start) == now or
-        extract('month', schedule.Event.date_end) == now,
+        extract('year', schedule.Event.date_start) == now or
+        extract('year', schedule.Event.date_end) == now,
     ).all()
 
     mapped_query = map(EventResponse.from_orm, query)

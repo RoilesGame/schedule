@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import Optional
+from typing import Optional, List
 
 from pydantic import BaseModel
 from pydantic.color import Color
@@ -37,7 +37,7 @@ class RepeatContract(BaseModel):
     freq: FreqEnum
     end_time: Optional[date] = None
     end_occurrences: Optional[int] = None
-    exceptions: list[ExceptionContract]
+    exceptions: List[ExceptionContract]
 
     class Config:
         orm_mode = True
@@ -53,7 +53,7 @@ class EventResponse(BaseModel):
     hidden: bool = False
     date_start: datetime
     date_end: datetime
-    notifications: list[NotificationContract]
+    notifications: List[NotificationContract]
     repeat: Optional[RepeatContract] = None
     status: Optional[str] = None
     conference_link: Optional[str] = None
@@ -66,7 +66,7 @@ class EventResponse(BaseModel):
 
 
 class ListEventsResponse(BaseModel):
-    events: list[EventResponse]
+    events: List[EventResponse]
 
 
 class EventRequest(BaseModel):
@@ -79,6 +79,6 @@ class EventRequest(BaseModel):
     all_day: bool = False
     hidden: bool = False
     repeat: Optional[RepeatContract] = None
-    notifications: list[NotificationContract]
+    notifications: List[NotificationContract]
     status: Optional[str] = None
     conference_link: Optional[str] = None

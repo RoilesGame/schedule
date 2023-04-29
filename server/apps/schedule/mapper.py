@@ -10,7 +10,7 @@ from server.persistence.schedule import (
     Event,
     Notification,
     Repeat,
-    ExceptionRepeat
+    ExceptionRepeat,
 )
 
 
@@ -53,7 +53,7 @@ def event_schema_mapping(schema: EventRequest) -> Event:
 
 
 def notifications_schema_mapping(
-        notifications: List[NotificationContract],
+    notifications: List[NotificationContract],
 ) -> List[Notification]:
     return [
         Notification(**notification.dict())
@@ -62,7 +62,7 @@ def notifications_schema_mapping(
 
 
 def exceptions_schema_mapping(
-        exceptions: List[ExceptionContract]
+    exceptions: List[ExceptionContract],
 ) -> List[ExceptionRepeat]:
     return [
         ExceptionRepeat(**exception.dict())
@@ -75,7 +75,7 @@ def repeat_schema_mapping(schema: RepeatContract) -> Repeat:
         return None
 
     values = {
-        'exceptions': exceptions_schema_mapping(schema.exceptions)
+        'exceptions': exceptions_schema_mapping(schema.exceptions),
     } | schema.dict(exclude={'exceptions'})
 
     return Repeat(**values)
