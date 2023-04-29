@@ -1,0 +1,5 @@
+-r requirements.txt
+
+wemake-python-styleguide == 0.17.0
+isort == 5.12.0
+djhtml == 3.0.6
