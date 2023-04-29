@@ -1,16 +1,16 @@
 {% macro render_field(field, class, type) %}
-<div class="mb-3">
-  {% if field.errors %}
-    <ul class=errors>
-    {% for error in field.errors %}
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          {{ error }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    {% endfor %}
-    </ul>
-  {% endif %}
-  {{ field.label(class='form-label') }}
-  <dd>{{ field(class=class, type=type)|safe }}</dd>
-</div>
+  <div class="mb-3">
+    {% if field.errors %}
+      <ul class=errors>
+        {% for error in field.errors %}
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ error }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {{ field.label(class='form-label') }}
+    <dd>{{ field(class=class, type=type)|safe }}</dd>
+  </div>
 {% endmacro %}

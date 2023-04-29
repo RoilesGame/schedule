@@ -3,12 +3,12 @@
 {% from '_formhelpers.html' import render_field %}
 
 {% block fields %}
-    {{ form.hidden_tag() }}
-    {{ render_field(form.name, class="form-control", type='') }}
-    {{ render_field(form.email, class="form-control", type="email") }}
-    {{ render_field(form.password, class="form-control", type="password") }}
-    {{ render_field(form.password_again, class="form-control", type="password") }}
-    {{ render_field(form.about, class="form-control", type='') }}
+  {{ form.hidden_tag() }}
+  {{ render_field(form.name, class="form-control", type='') }}
+  {{ render_field(form.email, class="form-control", type="email") }}
+  {{ render_field(form.password, class="form-control", type="password") }}
+  {{ render_field(form.password_again, class="form-control", type="password") }}
+  {{ render_field(form.about, class="form-control", type='') }}
 {% endblock %}
 
 {% block button_text %}

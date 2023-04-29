@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <title>Schedule</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="UTF-8">
+    <title>Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% block bootstrap5 %}
-        <script src="{{ url_for('static', filename='bootstrap5/js/bootstrap.min.js') }}"></script>
-        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap5/css/bootstrap.min.css') }}">
+      <script src="{{ url_for('static', filename='bootstrap5/js/bootstrap.min.js') }}"></script>
+      <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap5/css/bootstrap.min.css') }}">
     {% endblock bootstrap5 %}
-      {% block links %}
-      {% endblock links %}
-    </head>
-    <body>
+    {% block links %}
+    {% endblock links %}
+  </head>
+  <body>
     <div class="container">
       {% block nav %}
         {% include 'nav.html' %}
@@ -23,5 +23,5 @@
     </div>
     {% block content_without_container %}
     {% endblock %}
-    </body>
+  </body>
 </html>
