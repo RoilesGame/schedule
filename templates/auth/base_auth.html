@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-center">
+  <form
+    {% block form_action %}
+    action=""
+    {% endblock %}
+    method="post"
+    id="login-form"
+    class="u-clearfix u-form-custom-backend u-form-spacing-35 u-form-vertical u-inner-form"
+  >
+    <div>
+      {% block fields %}
+      {% endblock %}
+      {% block button %}
+      <div class="submit-row">
+        <button class="btn btn-dark my-4" type="submit">
+          {% block button_text %}
+          {% endblock %}
+        </button>
+      </div>
+      {% endblock %}
+    </div>
+  </form>
+</div>
+{% endblock %}
