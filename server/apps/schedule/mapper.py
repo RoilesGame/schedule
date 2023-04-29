@@ -1,16 +1,16 @@
-from typing import List, Dict
+from typing import Dict, List
 
 from server.apps.schedule.contracts import (
     EventRequest,
+    ExceptionContract,
     NotificationContract,
     RepeatContract,
-    ExceptionContract,
 )
 from server.persistence.schedule import (
     Event,
+    ExceptionRepeat,
     Notification,
     Repeat,
-    ExceptionRepeat,
 )
 
 
