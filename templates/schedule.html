@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='webcomponents/source/styles/smart.default.css') }}">
+    <script src="{{ url_for('static', filename='jquery-3.6.4.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/modules/smart.scheduler.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.element.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.button.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.scrollbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.data.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.buttongroup.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.radiobutton.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.tooltip.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.input.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.multiinput.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.checkinput.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.numberinput.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.timeinput.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.colorinput.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.date.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.listbox.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.dropdownlist.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.calendar.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.draw.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.numeric.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.math.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.timepicker.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.datetimepicker.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.export.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.window.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.switchbutton.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.toast.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.checkbox.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/source/smart.scheduler.js') }}"></script>
+    <script src="{{ url_for('static', filename='webcomponents/common/rrule.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='moment.js') }}"></script>
+    <script src="{{ url_for('static', filename='scheduler.js') }}"></script>
+    <script src="{{ url_for('static', filename='router.js') }}"></script>
+{% endblock links %}
+
+{% block content_without_container %}
+    <smart-scheduler id="scheduler"></smart-scheduler>
+{% endblock %}
